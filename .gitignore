@@ -67,3 +67,47 @@ vcpkg_installed/
 # test output & cache
 Testing/
 .cache/
+*/build
+# OCaml build artifacts
+*.cmi
+*.cmo
+*.cmx
+*.cmxa
+*.cma
+*.cmxs
+*.o
+*.a
+*.annot
+
+# OCaml native / bytecode executables
+*.byte
+*.native
+
+# Dune
+_build/
+.dune/
+.dune-workspace.dev
+
+# OPAM local switch
+_opam/
+
+# Merlin / editor tooling
+.merlin
+.merlin-conf/
+
+# CMake
+build/
+cmake-build-*/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+
+# Executables
+app
+main
+
+# Logs / temporary files
+*.log
+*.tmp
+.DS_Store
