@@ -1,6 +1,6 @@
 let ft_test_sign nb = 
     match nb with
     | nb when nb >= 0 ->
-            print_endline "positif"
+            print_endline "positive"
     | _ ->
-            print_endline "negatif"
+            print_endline "negative"
