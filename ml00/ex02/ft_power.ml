@@ -1,8 +1,8 @@
-let rec ft_power pow nb =
-    if nb < 0 then failwith "can't be negative"
-    else if nb = 0 then 1
-    else
-        let tmp = ft_power pow (nb / 2) in
-        if nb mod 2 = 0 then tmp * tmp
-        else
-            pow * tmp * tmp
+let rec ft_power (nb : int) (pow : int) =
+    match pow with
+    | 0 -> 1
+    | _ when pow < 0 -> 0
+    | _ when pow mod 2 = 0 ->
+            let tmp = ft_power nb (pow / 2) in
+            tmp * tmp
+    | _ -> nb * ft_power nb (pow - 1)
