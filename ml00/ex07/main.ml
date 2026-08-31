@@ -15,3 +15,5 @@ let () =
     print_newline();
     print_string (if Ft_palindrome.ft_palindrome "car" then "true" else "false");
     print_newline();
+    print_string (if Ft_palindrome.ft_palindrome "lol" then "true" else "false");
+    print_newline()

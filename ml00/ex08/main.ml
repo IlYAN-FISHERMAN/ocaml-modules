@@ -3,7 +3,6 @@ let () =
     print_endline (Ft_rot_n.ft_rot_n 1 "ABCDEFH10ABCDEFG");
     print_endline (Ft_rot_n.ft_rot_n 500 "ABCDEFH10ABCDEFG");
     print_endline (Ft_rot_n.ft_rot_n 10 "dawd");
-    print_endline (Ft_rot_n.ft_rot_n 10 "dawd");
 
     print_newline();
 
@@ -15,6 +14,11 @@ let () =
     print_endline (Ft_rot_n.ft_rot_n 42 "");
     print_endline (Ft_rot_n.ft_rot_n 1 "NBzlk qnbjr !");
 
+    print_newline();
+    print_endline (Ft_rot_n.ft_rot_n 0 "Test number 1 !");
+    print_endline (Ft_rot_n.ft_rot_n 1 "Test number 2 !");
+    print_endline (Ft_rot_n.ft_rot_n 13 "Test number 3 !");
+    print_endline (Ft_rot_n.ft_rot_n 42 "Test number 4 !");
     (*# ft_rot_n 1 "abcdefghijklmnopqrstuvwxyz";;
     - : string= "bcdefghijklmnopqrstuvwxyza"
     # ft_rot_n 13 "abcdefghijklmnopqrstuvwxyz";;
