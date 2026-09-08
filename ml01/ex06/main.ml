@@ -1,7 +1,7 @@
 let () =
     print_int (Iter.iter (fun x -> x * x) 2 4);
     print_newline ();
-    print_int (Iter.iter (fun x -> x * x) 2 4);
+    print_int (Iter.iter (fun x -> x * 2) 2 4);
     print_newline ();
     print_int (Iter.iter (fun x -> x * x) 3 4);
     print_newline ();

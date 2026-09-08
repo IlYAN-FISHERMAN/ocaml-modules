@@ -2,6 +2,8 @@ let () =
     if (Array.length Sys.argv = 1) then
         begin
             print_endline (Repeat_string.repeat_string ~str:"hey" 2);
+            print_endline (Repeat_string.repeat_string ~str:"daw" (-1));
+            print_endline (Repeat_string.repeat_string ~str:"hey" 0);
             print_endline (Repeat_string.repeat_string 0)
         end
     else if (Array.length Sys.argv = 3) then
