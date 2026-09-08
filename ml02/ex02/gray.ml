@@ -1,0 +1,1 @@
+let gray n () = n
