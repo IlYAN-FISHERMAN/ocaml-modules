@@ -13,4 +13,4 @@ let () =
     print_newline();
     Gray.gray 5;
     print_newline();
-    Gray.gray 100
+    Gray.gray 10
