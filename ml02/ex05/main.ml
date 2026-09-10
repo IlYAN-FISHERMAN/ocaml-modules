@@ -11,8 +11,8 @@ let () =
     print_endline "\n";
 
     print_endline "[Test with generate_helix 0 and -1]";
-    let nul = (Helix.generate_helix 0) in
-    print_endline (Helix.helix_to_string nul);
+    print_endline (Helix.helix_to_string (Helix.generate_helix 0));
+    print_endline (Helix.helix_to_string (Helix.generate_helix (-1)));
     print_endline "\n";
 
 
