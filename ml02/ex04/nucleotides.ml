@@ -1,9 +1,7 @@
-type phosphate =  string
-type deoxyribose = string
+type phosphate    =  string
+type deoxyribose  =  string
 
 type nucleobase = A | T | C | G | None
-
-(*type nucleotide = phosphate * deoxyribose * nucleobase*)
 
 type nucleotide = {
     phosphate : phosphate;
