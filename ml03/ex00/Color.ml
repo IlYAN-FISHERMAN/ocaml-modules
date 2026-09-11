@@ -15,4 +15,3 @@ let toStringVerbose color =
     | Heart -> "Heart"
     | Diamond -> "Diamond"
     | Club -> "Club"
-
