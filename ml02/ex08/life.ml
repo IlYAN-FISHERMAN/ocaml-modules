@@ -169,10 +169,5 @@ let life title =
     print_endline title;
     print_newline();
 
-    let hel = (generate_helix ((Random.int 15) + 15)) in
-    print_endline ("Helix -> " ^ (helix_to_string hel));
-    let compl = complementary_helix hel in
-    print_endline ("Compl -> " ^ (helix_to_string compl));
-    let rna = generate_rna hel in
-    print_endline ("Rna  -> " ^ (rna_to_string rna));
+    let rna = [G; C; A; U; A; A; A; G; A] in
     print_endline ("Protein -> " ^ string_of_protein (decode_arn rna));
