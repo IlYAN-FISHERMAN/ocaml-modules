@@ -105,11 +105,33 @@ let previous value =
 end
 
 type t = {
-    color : Color.t;
     value : Value.t;
+    color : Color.t;
 }
 
-let newCard value color = {color; value}
+let newCard value color = {value; color}
+
+let generate_random_card () = 
+    newCard (match (Random.int 13) with
+        | 0 -> Value.T2
+        | 1 -> Value.T2
+        | 2 -> Value.T3
+        | 3 -> Value.T4
+        | 4 -> Value.T5
+        | 5 -> Value.T6
+        | 6 -> Value.T7
+        | 7 -> Value.T8
+        | 8 -> Value.T9
+        | 9 -> Value.T10
+        | 10 -> Value.Jack
+        | 11 -> Value.Queen
+        | 12 -> Value.King
+        | _ -> Value.As)
+    (match (Random.int 3) with
+        | 0 -> Color.Spade
+        | 1 -> Color.Heart
+        | 2 -> Color.Diamond
+        | _ -> Color.Club)
 
 let getColor card = card.color
 
@@ -144,10 +166,10 @@ let toStringVerbose card =
     "Card(" ^ (Value.toStringVerbose card.value) ^ ", " ^ (Color.toStringVerbose card.color) ^ ")"
 
 let print cards =
-    List.iter (fun x -> print_endline (toString x)) cards
+    List.iter (fun x -> print_string ((toString x) ^ " ")) cards
 
 let printVerbose cards =
-    List.iter (fun x -> print_endline (toStringVerbose x)) cards
+    List.iter (fun x -> print_string ((toStringVerbose x) ^ " ")) cards
 
 let allOfColor color = List.map (fun x -> newCard x color) Value.all
 
