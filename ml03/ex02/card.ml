@@ -127,7 +127,7 @@ let generate_random_card () =
         | 11 -> Value.Queen
         | 12 -> Value.King
         | _ -> Value.As)
-    (match (Random.int 3) with
+    (match (Random.int 4) with
         | 0 -> Color.Spade
         | 1 -> Color.Heart
         | 2 -> Color.Diamond
