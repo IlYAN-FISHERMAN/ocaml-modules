@@ -104,4 +104,64 @@ let previous value =
     | As -> King
 end
 
-let card = ()
+type t = {
+    color : Color.t;
+    value : Value.t;
+}
+
+let newCard value color = {color; value}
+
+let getColor card = card.color
+
+let getValue card = card.value
+
+let compare card1 card2 =
+    if Value.toInt card1.value < Value.toInt card2.value then -1
+    else if Value.toInt card1.value = Value.toInt card2.value then 0
+    else 1
+
+let max card1 card2 =
+    if compare card1 card2 < 0 then card2
+    else card1
+
+let min card1 card2 =
+    if compare card1 card2 <= 0 then card1
+    else card2
+
+let isOf card color = (card.color = color)
+
+let isSpade card = isOf card Color.Spade
+
+let isHeart card = isOf card Color.Heart
+
+let isDiamond card = isOf card Color.Diamond
+ 
+let isClub card = isOf card Color.Club
+
+let toString card = (Value.toString card.value) ^ (Color.toString card.color)
+
+let toStringVerbose card = 
+    "Card(" ^ (Value.toStringVerbose card.value) ^ ", " ^ (Color.toStringVerbose card.color) ^ ")"
+
+let print cards =
+    List.iter (fun x -> print_endline (toString x)) cards
+
+let printVerbose cards =
+    List.iter (fun x -> print_endline (toStringVerbose x)) cards
+
+let allOfColor color = List.map (fun x -> newCard x color) Value.all
+
+let allHearts = allOfColor Color.Heart
+
+let allDiamonds = allOfColor Color.Diamond
+
+let allClubs = allOfColor Color.Club
+
+let allSpades = allOfColor Color.Spade
+
+let all = allSpades @ allHearts @ allDiamonds @ allClubs
+
+let best cards =
+    match cards with
+    | [] -> invalid_arg "Card.best: Empty list"
+    | x :: rest -> List.fold_left max x rest
