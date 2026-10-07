@@ -1,0 +1,3 @@
+(executable
+ (name ft_ref)
+ (libraries unix))
