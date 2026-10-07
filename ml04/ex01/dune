@@ -1,3 +1,2 @@
 (executable
- (name ft_ref)
- (libraries unix))
+ (name ft_ref))
