@@ -10,6 +10,7 @@ let () =
                     while true do
                         let line = input_line file in
                         if String.length line = 0 then ()
+                        else if String.starts_with ~prefix:"#" line then ()
                         else
                             lst := line :: !lst;
                     done with
@@ -23,8 +24,8 @@ let () =
             else
             begin
                 let joke = tab.(Random.int (Array.length tab)) in
-                let lst = String.split_on_char '|' joke in
-                match lst with
+                let parts = String.split_on_char '|' joke in
+                match parts with
                 | [x; y] ->
                         begin
                             print_endline x;

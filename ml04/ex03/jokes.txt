@@ -1,3 +1,7 @@
+# Format: one joke per line.
+# Separate the question from the answer with '|': Question?|Answer
+# Lines starting with '#' and empty lines are ignored.
+
 Un mec sur leboncoin veut vendre son SPA. Mais personne ne l’achète. Pourquoi ?|Il a écrit SPA à vendre…
 Qu’est-ce qui est petit, carré et jaune ?|Un petit carré jaune…
 Est-ce qu’un Mikado qui devient adulte|Devient un Mikadulte ?
