@@ -16,9 +16,11 @@ let () =
     let first = str in
     let tmp = get str in
     set str "Hello World!";
-    let other = bind str (fun x -> return (x ^ " wtf dude")) in
-
-    print_endline ("other: " ^ (get other));
+    let other = bind str (fun x -> return (String.length x)) in
+    print_string "other: ";
+    print_int (get other);
+    print_newline();
+    
     print_endline ("str: " ^ (get str));
     print_endline ("tmp: " ^ tmp);
-    print_endline ("fist (should be Hello World): " ^ (get first))
+    print_endline ("first (should be Hello World): " ^ (get first))
