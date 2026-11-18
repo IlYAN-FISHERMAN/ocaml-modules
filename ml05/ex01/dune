@@ -1,2 +1,2 @@
 (executable
- (name ft_ref))
+ (name ex01))

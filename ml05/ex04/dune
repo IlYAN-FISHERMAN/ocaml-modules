@@ -1,2 +1,2 @@
 (executable
- (name sum))
+ (name ex04))
